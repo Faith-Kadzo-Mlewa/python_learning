@@ -87,3 +87,36 @@ sample_string3 = sample_string3[0] + my_char2 + changed_string2[2:]
 
 print(sample_string3)
 
+"""
+Write a Python program to get a single string from two given strings, 
+separated by a space and swap the first characters of each string.
+Sample String : 'abc', 'xyz'
+Expected Result : 'xbc ayz'
+"""
+sample_string4 = 'abc'
+sample_string5 = 'xyz'
+
+#Implementation Method
+conc_string = sample_string4 + " " +sample_string5
+print(conc_string)
+my_char1 = sample_string4[0]
+my_char2 = sample_string5[0]
+
+conc_string1 = my_char2 + sample_string4[1:] + " " + my_char1 + sample_string5[1:]
+print(conc_string1)
+
+
+"""
+Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each string. Go to the editor
+Sample String : 'abc', 'xyz'
+Expected Result : 'xyc abz'
+
+sample_string4 = 'abc'
+sample_string5 = 'xyz'
+"""
+#Implementation Method
+swapped_string1 = sample_string5[:2] + sample_string4[2:]
+swapped_string2 = sample_string4[:2] + sample_string5[2:]
+
+print(swapped_string1+ " " + swapped_string2)
+
