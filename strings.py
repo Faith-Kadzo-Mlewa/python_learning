@@ -110,4 +110,39 @@ b = "This is my first Python programming"
 c = (b.replace(" is", " was"))
 print(c)
 
+"""
+Examples of String Formatting in Python
 
+The placeholder for strings = %s , for integers = %d , for floating point numbers = %f
+"""
+city = "Nairobi"
+event = "Koroga Festival"
+swahili = "Nairobi"
+
+#way 1
+print("Welcome to " + city + " and enjoy our 10th Edition of " + event)
+
+#way 2 (Better way)
+print("Welcome to %s and enjoy our 10th Edition of %s" % (city, event)
+      )
+#way 2 to print only one string
+print("Karibu %s" %swahili)
+
+#placeholer for integers
+balance = 2000 + 3000
+print("Welcome back Faith, your balance is %d" %balance)
+
+#placeholder for floating point values
+remainder = 10.0 - 1.5
+print("the remainder is %f" %remainder)
+
+"""
+Input() function
+"""
+
+my_city = input("Enter my dream city: ")
+print("Congratulations you will soon be travelling  to %s" %my_city )
+
+my_weight = int(input("Enter your weight: "))
+print("Your weight is: %d" %my_weight)
+print(type(my_weight))
