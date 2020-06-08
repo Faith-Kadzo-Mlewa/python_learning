@@ -18,3 +18,13 @@ l=[1, 2, 3, 3, 2, 1]
 print(l[-2: ])
 print(l[4:])
 print(l[4:6])
+
+
+custom_list1 = [2,3,4,5]
+custom_list2 = ['a','b','c','d']
+
+for i in custom_list2:
+    custom_list1.append(i)
+
+    print(custom_list1)
+
