@@ -3,6 +3,7 @@ Data Type that stores more than one value in one variable name
 List items are in brackets separated by "," [1, 2, 3]
 
 List is mutable because we can add and modify elements to and from the same list
+even after creation
 """
 cars = ['bmw', 'range-rover', 'Audi']
 print(cars)
@@ -16,6 +17,17 @@ print(empty_list)
 print(cars[0])
 print(cars[1])
 print(cars[2])
+
+print( '*' * 10)
+
+#A multidimentional list(By nesting a list inside another list
+multidim = [[1, 2], 'one', [3, 4], 'three']
+print(multidim)
+print(multidim[0][1])
+print(multidim[3])
+print(multidim[2][0])
+
+print( '*' * 10)
 
 #Numbers list operations
 numb_list = [1, 2, 3, 4]
@@ -66,13 +78,20 @@ print(list_length)
 weekdays.append('Friday')
 print(weekdays)
 
-#insert() method - Adds elements to a desired index
+#insert() method - Adds elements to a desired index. Has 2 arguments (position,value)
 weekdays.insert(2, 'Saturday')
 print(weekdays)
 
 #index() method - Find index of a particular item in a list
 x = weekdays.index("Saturday")
 print(x)
+
+#extend() method - Adds multiple elements at the same time at the end of the list
+alphabets = ['a', 'b', 'c', 'd', 'e']
+print(alphabets)
+
+alphabets.extend([1, 2, 3])
+print(alphabets)
 
 #pop() method - Removes the last item from the list unless its given a particular index value.
 #When a particular index value is given then the element in that index will be removed
@@ -81,9 +100,17 @@ print(y)
 
 print(weekdays)
 
-#remove() method - Used to remove an item whose value is stated
+#remove() method - Used to remove an item whose value is stated. Only removes an element at a time
+#remove() method will only remove the first occurence of the searched element
 weekdays.remove("Tuesday")
 print(weekdays)
+
+#to remove multiple elements in a list, an iterator has to be used
+remov_list = [1,2,3,3,4,4,5,6,7,8]
+print(remov_list)
+for i in range(1,5):
+    remov_list.remove(i)
+print(remov_list)
 
 print('*' *20)
 """
@@ -103,7 +130,9 @@ print(slice2)
 slice3 = digit_list[3:8:2]
 print(slice3)
 
-
+print("Printing the entire list in reverse order")
+slice4 = digit_list[::-1]
+print(slice4)
 print('*' *20)
 
 """
@@ -123,7 +152,7 @@ print(a)
 print('*' *20)
 
 """
-Count() method. Counting the numner of occurance of an item in a list
+Count() method. Counting the number of occurrence of an item in a list
 """
 occurance = ['a', 'b', 'c', 'd', 'a', 'c', 'a', 'b', 'b']
 print(occurance.count('a'))
